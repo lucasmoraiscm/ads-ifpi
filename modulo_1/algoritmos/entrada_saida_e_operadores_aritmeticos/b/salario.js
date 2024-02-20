@@ -14,6 +14,6 @@ const novo_salario = salario_atual + aumento
 const resultado = `
 --------------------------
 Parabéns! Você recebeu um aumento de salário!
-O valor do seu novo salário é ${novo_salario.toFixed(2)}R$
+O valor do seu novo salário é R$ ${novo_salario.toFixed(2)}
 `
 console.log(resultado)
