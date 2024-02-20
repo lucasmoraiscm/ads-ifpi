@@ -12,6 +12,6 @@ const porcentagem_valor = valor_reais * 0.7
 // Saída
 const resultado = `
 -------------------------------------
-70% de ${valor_reais.toFixed(2)}R$ é igual a ${porcentagem_valor.toFixed(2)}R$
+70% de R$ ${valor_reais.toFixed(2)} é igual a R$ ${porcentagem_valor.toFixed(2)}
 `
 console.log(resultado)
