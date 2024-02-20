@@ -15,6 +15,6 @@ var resultado = `
 -------------------------------------------
 Cotação atual do dólar($) -> ${cotacao_dolar}
 Valor em dólar($) -> ${dolar}
-${dolar}$ equivale a ${real.toFixed(2)}R$
+$ ${dolar} equivale a R$ ${real.toFixed(2)}
 `
 console.log(resultado)
