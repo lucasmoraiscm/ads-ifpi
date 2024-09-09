@@ -2,7 +2,7 @@ import { menu, inicializar, mostrar_valores, qtd_itens, menor, maior, somatorio,
         valores_negativos, atualizar, multiplicar_por_valor, elevar_a_valor, reduzir_a_fracao, 
         substituir_negativos, ordenar } from '../play_number_smart/vetor_funcionalidades.js'
 
-import { ler_arquivo, get_number, get_positive_number, show, media, salvar } from '../play_number_smart/utils.js'
+import { ler_arquivo, get_number, get_positive_number, get_text, get_random_number, show, media, salvar } from '../play_number_smart/utils.js'
 
 import { mapear, filtrar, reduzir, gerar_vetor_random, gerar_vetor_manual, resertar, ordenar_crescente, 
         ordenar_decrescente, verificar_posicao, embaralhar, adicionar, remover_por_valor, remover_por_posicao, 
@@ -70,19 +70,27 @@ Maior: ${numero_maior} -> Posição: ${posicao_maior}
 
             while (opcao_atualizar !== 0){
                 if (opcao_atualizar === 1){
-                    const numeros_multiplicados = mapear(numeros, multiplicar_por_valor)
+                    const valor_mutiplicador = get_number('Multiplicar por: ')
+                    const numeros_multiplicados = mapear(numeros, v => {return v * valor_mutiplicador})
                     numeros = numeros_multiplicados
                     show('Valores atualizados com sucesso!')
                 }else if (opcao_atualizar === 2){
-                    const numeros_elevados = mapear(numeros, elevar_a_valor)
+                    const valor_expoente = get_number('Elevar a: ')
+                    const numeros_elevados = mapear(numeros, v => {return v ** valor_expoente})
                     numeros = numeros_elevados
                     show('Valores atualizados com sucesso!')
                 }else if (opcao_atualizar === 3){
-                    const numeros_fracionados = mapear(numeros, reduzir_a_fracao)
+                    const get_fracao = get_text('Reduzir a fraçao (ex. 1/2): ')
+                    const partes_fracao = get_fracao.split('/')
+                    const fracao = Number(partes_fracao[0]) / Number(partes_fracao[1])
+                    const numeros_fracionados = mapear(numeros, v => {return v * fracao})
                     numeros = numeros_fracionados
                     show('Valores atualizados com sucesso!')
                 }else if (opcao_atualizar === 4){
-                    const numeros_sem_negativos = mapear(numeros, substituir_negativos)
+                    show('Intervalo do número')
+                    const min = get_positive_number('Número mínimo: ')
+                    const max = get_positive_number('Número máximo: ')
+                    const numeros_sem_negativos = mapear(numeros, v => {v < 0 ? get_random_number(min, max) : v})
                     numeros = numeros_sem_negativos
                     show('Valores atualizados com sucesso!')
                 }else if (opcao_atualizar === 5){
