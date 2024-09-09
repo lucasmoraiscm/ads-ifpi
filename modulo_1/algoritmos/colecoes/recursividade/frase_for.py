@@ -8,24 +8,22 @@ def main():
 
 
 def contar_vogais(frs):
+    vogais = 'AaEeIiOoUu'
     qtd_vog = 0
 
     for i in range(len(frs)):
-        if frs[i] == 'A' or frs[i] == 'a' or frs[i] == 'E' or frs[i] == 'e' or \
-            frs[i] == 'I' or frs[i] == 'i' or frs[i] == 'O' or frs[i] == 'o' or \
-                frs[i] == 'U' or frs[i] == 'u':
+        if frs[i] in vogais:
             qtd_vog += 1
 
     return qtd_vog
 
 
 def contar_consoantes(frs):
+    vogais_espaço = 'AaEeIiOoUu '
     qtd_con = 0
 
     for i in range(len(frs)):
-        if frs[i] != 'A' and frs[i] != 'a' and frs[i] != 'E' and frs[i] != 'e' and \
-            frs[i] != 'I' and frs[i] != 'i' and frs[i] != 'O' and frs[i] != 'o' and \
-                frs[i] != 'U' and frs[i] != 'u' and frs[i] != ' ':
+        if frs[i] not in vogais_espaço:
             qtd_con += 1
 
     return qtd_con
