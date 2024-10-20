@@ -5,8 +5,8 @@ Ex:<br>
 - **Classe:** Pessoa;
 - **Objetos:** Maria, João.
 
-**2.** Atributos: São as informações que caracterizam os objetos.<br>
-Métodos: São os comportamentos realizados pelos objetos.<br>
+**2. Atributos:** São as informações que caracterizam os objetos.<br>
+**Métodos:** São os comportamentos realizados pelos objetos.<br>
 Ex:<br>
 - **Pessoa**
   - **Atributos:** nome, idade, cor_do_cabelo;
@@ -21,9 +21,9 @@ Ex:<br>
 
 **5.** Plano de ensino, laboratório, departamento, diretor de departamento e campus.
    
-**6. Corrida de F1** <br>
-- **Atributos:** duração, local, quantidade de pilotos, quantidade de equipes, resultado. 
-- **Métodos:** iniciar corrida, pausar, contar voltas, contar tempo de volta do piloto, punir pilotos, determinar bandeiras de sinalização, finalizar corrida.
+**6. Jogo de futebol** <br>
+- **Atributos:** duração, local, tipo, quantidade de jogadores, placar, time1, time2, árbitro, quantidade de espectadores no local.
+- **Métodos:** iniciar partida, adicionar tempo adicional, substituir jogador, punir jogador, finalizar partidas.
 
 **10 .** <br>
     ![diagrama de classe da questão 10](https://github.com/lucasmoraiscm/ads-ifpi/blob/main/modulo_2/poo/atividade_extra/questao_10_uml.png)
