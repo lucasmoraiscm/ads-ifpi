@@ -13,7 +13,7 @@ Ex:
       - Métodos: aumentar_idade() e mudar_cor_do_cabelo(nova_cor).
 
 3. Sim, pois o sistema pode possuir funcionalidades que se baseiam nos atributos de uma pessoa.<br>
-  >>quadro<<
+   ![quadro da questão 3](https://github.com/lucasmoraiscm/ads-ifpi/blob/main/modulo_2/poo/atividade_extra/questao_3_quadro.png)
 
 4. <br>
     a. Sim, porque o atributo titular da conta teria um objeto pessoa com todos os seus atributos, sendo assim, uma representação mais próxima ao mundo real.<br>
@@ -26,4 +26,4 @@ Ex:
      - Métodos: iniciar corrida, pausar, contar voltas, contar tempo de volta do piloto, punir pilotos, determinar bandeiras de sinalização, finalizar corrida.
 
 10 . <br>
-  >>ft<<
+  ![diagrama de classe da questão 10](https://github.com/lucasmoraiscm/ads-ifpi/blob/main/modulo_2/poo/atividade_extra/questao_10_uml.png)
