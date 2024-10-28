@@ -9,4 +9,4 @@
 
 **3.** e.
 
-**4.** Contrutor(4); Classe(2); Operador de instanciação(3); objeto(1) <br>
+**4.** (4) Contrutor; (2) Classe; (3) Operador de instanciação; (1) objeto <br>
