@@ -208,22 +208,19 @@ class Banco {
         let indiceProcurado: number = this.consultarClientePorIndice(cpf);
 
         if (clienteProcurado && indiceProcurado != -1) {
-            for (let i: number = indiceProcurado; i < this._clientes.length - 1; i++) {
-                this._clientes[i] = this._clientes[i + 1];
-            }
-            this._clientes.pop();
-
             for (let i = 0; i < this._contas.length; i++) {
                 if (this._contas[i].cliente) {
                     if (clienteProcurado.cpf == this._contas[i].cliente.cpf) {
-                        for (let indiceConta = i; indiceConta < this._contas.length - 1; indiceConta++) {
-                            this._contas[indiceConta] = this._contas[i + 1];
-                        }
-                        this._contas.pop()
+                        this.excluirConta(this._contas[i].numero);
                         i--;
                     }
                 }
             }
+
+            for (let i: number = indiceProcurado; i < this._clientes.length - 1; i++) {
+                this._clientes[i] = this._clientes[i + 1];
+            }
+            this._clientes.pop();
             return true;
         }
         return false;
