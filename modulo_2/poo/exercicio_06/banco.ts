@@ -34,19 +34,19 @@ class Conta {
         this._cliente = cliente;
     }
 
-    sacar(valor: number): void {
+    public sacar(valor: number): void {
         this._saldo = this._saldo - valor;
     }
 
-    depositar(valor: number): void {
+    public depositar(valor: number): void {
         this._saldo = this._saldo + valor;
     }
 
-    consultarSaldo(): number {
-        return this._saldo
+    public consultarSaldo(): number {
+        return this._saldo;
     }
 
-    transferir(ContaDestino: Conta, valor: number): void {
+    public transferir(ContaDestino: Conta, valor: number): void {
         this.sacar(valor);
         ContaDestino.depositar(valor);
     }
@@ -313,16 +313,9 @@ class Banco {
         let clienteAntigo: Cliente = contaProcurada.cliente;
 
         if (contaProcurada && clienteAntigo) {
-            let indiceConta: number = 0;
+            let indiceProcurado: number = this.consultarContaPorIndice(contaProcurada.numero);
 
-            for (let conta of clienteAntigo.contas) {
-                if (numeroConta == conta.numero) {
-                    break;
-                }
-                indiceConta++;
-            }
-
-            for (let i: number = indiceConta; i < clienteAntigo.contas.length - 1; i++) {
+            for (let i: number = indiceProcurado; i < clienteAntigo.contas.length - 1; i++) {
                 clienteAntigo.contas[i] = clienteAntigo.contas[i + 1];
             }
             clienteAntigo.contas.pop();
@@ -386,7 +379,7 @@ class Banco {
             }
             return false;
         }
-        return false
+        return false;
     }
 
     public obterQuantidadeDeContas(): number {
