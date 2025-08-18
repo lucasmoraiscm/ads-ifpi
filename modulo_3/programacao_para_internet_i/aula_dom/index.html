@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D.O.M. parte 2</title>
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <h1>D.O.M. parte 2</h1>
+    <div id="resultado"></div>
+    <script>
+        document.getElementById('resultado').innerHTML = "<p id='p1'>hello world</p>"
+    </script>
+    <h2>Criando um parágrafo</h2>
+    <button id="botaoCriarParagrafo">Criar parágrafo</button>
+    <div id="resultado1"></div>
+
+    <h2>Criar um elemento qualquer</h2>
+    <input id="tagElemento" placeholder="Nome da tag">
+    <input id="id" placeholder="Informe o id">
+    <input id="texto" placeholder="Texto">
+
+    <input id="atributo" placeholder="Nome do atributo">
+    <input id="valor" placeholder="Valor do atributo">
+    <input id="pai" placeholder="Pai">
+
+    <button id="botaoCriarElemento">Criar elemento</button>
+    <div id="resultado2"></div>
+
+    <h2>Criando uma tabela</h2>
+    <input id="descricao" placeholder="Descrição da tarefa">
+    <input id="percentual" placeholder="Percentual da tarefa">
+    <button id="botaoAdicionarTarefa">Adicionar tarefa</button>
+
+    <table id="tarefas">
+        <tr>
+            <th>#</th>
+            <th>Descrição</th>
+            <th>% concluído</th>
+            <th>Ações</th>
+        </tr>
+    </table>
+
+    <br><br><br><br><br><br>
+</body>
+</html>
